@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         
         if let device = MTLCreateSystemDefaultDevice() {
             self.deviceLabel.text = "GPU name:\n\(device.name)"
+        } else {
+            self.deviceLabel.text = "Your device is not supported Metal 🤪"
         }
         
 //        self.getDefaultDeviceInfor()
