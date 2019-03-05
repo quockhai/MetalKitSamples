@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import MetalKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var deviceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if let device = MTLCreateSystemDefaultDevice() {
+            self.deviceLabel.text = "GPU name:\n\(device.name)"
+        }
+        
+//        self.getDefaultDeviceInfor()
     }
 
-
+//    func getDefaultDeviceInfor() {
+//        let device = MTLCreateSystemDefaultDevice()
+//
+//        print("GPU name: \(device?.name ?? "")")
+//    }
+    
 }
 
