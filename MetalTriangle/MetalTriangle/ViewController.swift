@@ -32,10 +32,10 @@ class ViewController: UIViewController {
             ])
         
         NSLayoutConstraint.activate([
-            triangleView.widthAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.widthAnchor, multiplier: 1.0),
-            triangleView.heightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.heightAnchor, multiplier: 1.0),
-            triangleView.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor),
-            triangleView.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor)
+            triangleView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1.0),
+            triangleView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1.0),
+            triangleView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            triangleView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
             ])
         
         self.triangleView = triangleView
