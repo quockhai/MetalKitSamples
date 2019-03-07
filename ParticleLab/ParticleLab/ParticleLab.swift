@@ -158,7 +158,7 @@ import MetalKit
         resetParticles(edgesOnly: true)
     }
     
-    func resetGravityWells()
+    @objc func resetGravityWells()
     {
         setGravityWellProperties(gravityWell: 1, normalisedPositionX: 0.5, normalisedPositionY: 0.5, mass: 0, spin: 0)
         setGravityWellProperties(gravityWell: 2, normalisedPositionX: 0.5, normalisedPositionY: 0.5, mass: 0, spin: 0)
@@ -365,28 +365,29 @@ import MetalKit
         particleLabDelegate?.particleLabDidUpdate(status: statusPrefix + statusPostix)
     }
     
-    final func getGravityWellNormalisedPosition(gravityWell: Int) -> (x: Float, y: Float) {
-        let returnPoint: (x: Float, y: Float)
+    @objc final func getGravityWellNormalisedPosition(gravityWell: Int) -> CGPoint {
+        var returnPoint: CGPoint = CGPoint(x: 0, y: 0)
         
-        let imageWidthFloat = Float(imageWidth)
-        let imageHeightFloat = Float(imageHeight)
+        let imageWidthFloat = Double(imageWidth)
+        let imageHeightFloat = Double(imageHeight)
         
         switch gravityWell
         {
         case 1:
-            returnPoint = (x: gravityWellParticle.A.x / imageWidthFloat, y: gravityWellParticle.A.y / imageHeightFloat)
+            
+            returnPoint = CGPoint(x: Double(gravityWellParticle.A.x) / imageWidthFloat, y: Double(gravityWellParticle.A.y) / imageHeightFloat)
             
         case 2:
-            returnPoint = (x: gravityWellParticle.B.x / imageWidthFloat, y: gravityWellParticle.B.y / imageHeightFloat)
+            returnPoint = CGPoint(x: Double(gravityWellParticle.B.x) / imageWidthFloat, y: Double(gravityWellParticle.B.y) / imageHeightFloat)
             
         case 3:
-            returnPoint = (x: gravityWellParticle.C.x / imageWidthFloat, y: gravityWellParticle.C.y / imageHeightFloat)
+            returnPoint = CGPoint(x: Double(gravityWellParticle.C.x) / imageWidthFloat, y: Double(gravityWellParticle.C.y) / imageHeightFloat)
             
         case 4:
-            returnPoint = (x: gravityWellParticle.D.x / imageWidthFloat, y: gravityWellParticle.D.y / imageHeightFloat)
+            returnPoint = CGPoint(x: Double(gravityWellParticle.D.x) / imageWidthFloat, y: Double(gravityWellParticle.D.y) / imageHeightFloat)
         
         default:
-            returnPoint = (x: gravityWellParticle.A.x / imageWidthFloat, y: gravityWellParticle.A.y / imageHeightFloat)
+            returnPoint = CGPoint(x: Double(gravityWellParticle.A.x) / imageWidthFloat, y: Double(gravityWellParticle.A.y) / imageHeightFloat)
         }
         
         return returnPoint
