@@ -14,6 +14,7 @@
 		883952772230C08B00F9C193 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883952752230C08B00F9C193 /* LaunchScreen.storyboard */; };
 		883952802230C0AC00F9C193 /* TriangleMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839527E2230C0AC00F9C193 /* TriangleMetalView.swift */; };
 		883952812230C0AC00F9C193 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8839527F2230C0AC00F9C193 /* Shaders.metal */; };
+		88395314223107C500F9C193 /* MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88395313223107C500F9C193 /* MathUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		883952782230C08B00F9C193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8839527E2230C0AC00F9C193 /* TriangleMetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleMetalView.swift; sourceTree = "<group>"; };
 		8839527F2230C0AC00F9C193 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		88395313223107C500F9C193 /* MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				883952782230C08B00F9C193 /* Info.plist */,
 				8839527F2230C0AC00F9C193 /* Shaders.metal */,
 				8839527E2230C0AC00F9C193 /* TriangleMetalView.swift */,
+				88395313223107C500F9C193 /* MathUtils.swift */,
 			);
 			path = MetalMatrix;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				883952802230C0AC00F9C193 /* TriangleMetalView.swift in Sources */,
 				8839526F2230C08900F9C193 /* ViewController.swift in Sources */,
 				8839526D2230C08900F9C193 /* AppDelegate.swift in Sources */,
+				88395314223107C500F9C193 /* MathUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

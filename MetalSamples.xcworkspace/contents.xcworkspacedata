@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ParticleLab/ParticleLab.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MetalMatrix/MetalMatrix.xcodeproj">
    </FileRef>
    <FileRef
