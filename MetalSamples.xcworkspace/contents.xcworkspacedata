@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MetalMatrix/MetalMatrix.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MetalGradient/MetalGradient.xcodeproj">
    </FileRef>
    <FileRef
