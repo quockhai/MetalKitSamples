@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Raytracer.playground">
+   </FileRef>
+   <FileRef
+      location = "group:PGDemo.playground">
+   </FileRef>
+   <FileRef
       location = "group:ParticleLab/ParticleLab.xcodeproj">
    </FileRef>
    <FileRef

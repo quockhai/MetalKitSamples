@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
+        
+//        CGImage.init(maskWidth: <#T##Int#>, height: <#T##Int#>, bitsPerComponent: <#T##Int#>, bitsPerPixel: <#T##Int#>, bytesPerRow: <#T##Int#>, provider: <#T##CGDataProvider#>, decode: <#T##UnsafePointer<CGFloat>?#>, shouldInterpolate: <#T##Bool#>)
+        
+        
+        
         let triangleView = TriangleMetalView(frame: .zero)
         triangleView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(triangleView)
