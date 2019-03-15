@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MetalParticle/MetalParticle.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ComputeShader.playground">
+   </FileRef>
+   <FileRef
       location = "group:Cube3D.playground">
    </FileRef>
    <FileRef
