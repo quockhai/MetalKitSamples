@@ -52,15 +52,6 @@ class MetalParticleView: MTKView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func initializeBuffers() {
-        for _ in 0 ..< particleCount {
-            let particle = Particle(position: float2(Float(arc4random() %  UInt32(side)), Float(arc4random() % UInt32(side))), velocity: float2((Float(arc4random() %  10) - 5) / 10, (Float(arc4random() %  10) - 5) / 10))
-            particles.append(particle)
-        }
-        let size = particles.count * MemoryLayout<Particle>.size
-        particleBuffer = device!.makeBuffer(bytes: &particles, length: size, options: [])
-    }
-    
     func initializeMetal() {
         do {
             let library = device!.makeDefaultLibrary()
@@ -70,6 +61,16 @@ class MetalParticleView: MTKView {
             secondState = try device!.makeComputePipelineState(function: secondPass)
         } catch let e { print(e) }
     }
+    
+    func initializeBuffers() {
+        for _ in 0 ..< particleCount {
+            let particle = Particle(position: float2(Float(arc4random() %  UInt32(side)), Float(arc4random() % UInt32(side))), velocity: float2((Float(arc4random() %  10) - 5) / 10, (Float(arc4random() %  10) - 5) / 10))
+            particles.append(particle)
+        }
+        let size = particles.count * MemoryLayout<Particle>.size
+        particleBuffer = device!.makeBuffer(bytes: &particles, length: size, options: [])
+    }
+    
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -82,9 +83,9 @@ class MetalParticleView: MTKView {
             // first pass
             commandEncoder.setComputePipelineState(firstState)
             commandEncoder.setTexture(drawable.texture, index: 0)
-            let w = firstState.threadExecutionWidth
-            let h = firstState.maxTotalThreadsPerThreadgroup / w
-            let threadsPerGroup = MTLSizeMake(w, h, 1)
+//            let w = firstState.threadExecutionWidth
+//            let h = firstState.maxTotalThreadsPerThreadgroup / w
+            let threadsPerGroup = MTLSizeMake(1, 1, 1)//MTLSizeMake(w, h, 1)
             var threadsPerGrid = MTLSizeMake(side, side, 1)
             commandEncoder.dispatchThreads(threadsPerGrid, threadsPerThreadgroup: threadsPerGroup)
             

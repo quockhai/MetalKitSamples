@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ComputeShader/ComputeShader.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Cube3D/Cube3D.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Raytracer/Raytracer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ParticleSystems/ParticleSystems.xcodeproj">
    </FileRef>
    <FileRef
@@ -9,18 +18,6 @@
    </FileRef>
    <FileRef
       location = "group:MetalParticle/MetalParticle.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ComputeShader.playground">
-   </FileRef>
-   <FileRef
-      location = "group:Cube3D.playground">
-   </FileRef>
-   <FileRef
-      location = "group:Raytracer.playground">
-   </FileRef>
-   <FileRef
-      location = "group:PGDemo.playground">
    </FileRef>
    <FileRef
       location = "group:ParticleLab/ParticleLab.xcodeproj">
