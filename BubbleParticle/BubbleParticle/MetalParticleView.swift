@@ -68,8 +68,6 @@ class MetalParticleView: MTKView {
     }
     
     func initializeMetal() {
-        device = MTLCreateSystemDefaultDevice()
-        self.commandQueue = device!.makeCommandQueue()
         self.initializeBuffers()
         let library: MTLLibrary
         do {

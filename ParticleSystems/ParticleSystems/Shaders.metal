@@ -9,61 +9,34 @@
 #include <metal_stdlib>
 using namespace metal;
 
-struct VertexIn {
-    float4 position [[attribute(0)]];
-};
-
-struct VertexOut {
-    float4 position [[position]];
-    float4 color;
-};
-
 struct Particle {
-    float4x4 initial_matrix;
-    float4x4 matrix;
-    float4 color;
+    float2 position;
+    float2 velocity;
 };
 
-vertex VertexOut vertex_main(const VertexIn vertex_in [[stage_in]],
-                             constant Particle *particles [[buffer(1)]],
-                             uint instanceid [[instance_id]]) {
-    VertexOut vertex_out;
-    Particle particle = particles[instanceid];
-    vertex_out.position = particle.matrix * vertex_in.position ;
-    vertex_out.color = particle.color;
-    return vertex_out;
+kernel void firstPass(texture2d<half, access::write> output [[texture(0)]],
+                      uint2 id [[thread_position_in_grid]]) {
+    output.write(half4(0., 0., 0., 1.), id);
 }
 
-fragment float4 fragment_main(VertexOut vertex_in [[stage_in]]) {
-    return vertex_in.color;
+kernel void secondPass(texture2d<half, access::write> output [[texture(0)]],
+                       device Particle *particles [[buffer(0)]],
+                       uint id [[thread_position_in_grid]]) {
+    Particle particle = particles[id];
+    float2 position = particle.position;
+    float2 velocity = particle.velocity;
+    int width = output.get_width();
+    int height = output.get_height();
+    if (position.x < 0 || position.x > width) { velocity.x *= -1; }
+    if (position.y < 0 || position.y > height) { velocity.y *= -1; }
+    position += velocity;
+    particle.position = position;
+    particle.velocity = velocity;
+    particles[id] = particle;
+    uint2 pos = uint2(position.x, position.y);
+    output.write(half4(1.), pos);
+    output.write(half4(1.), pos + uint2( 1, 0));
+    output.write(half4(1.), pos + uint2( 0, 1));
+    output.write(half4(1.), pos - uint2( 1, 0));
+    output.write(half4(1.), pos - uint2( 0, 1));
 }
-
-
-//struct Particle {
-//    float2 center;
-//    float radius;
-//};
-//
-//float distanceToParticle(float2 point, Particle p) {
-//    return length(point - p.center) - p.radius;
-//}
-//
-//kernel void compute(texture2d<float, access::write> output [[texture(0)]],
-//                    constant float &time [[buffer(0)]],
-//                    uint2 gid [[thread_position_in_grid]]) {
-//    float width = output.get_width();
-//    float height = output.get_height();
-//    float2 uv = float2(gid) / float2(width, height);
-//    float aspect = width / height;
-//    uv.x *= aspect;
-//    float2 center = float2(aspect / 2, time);
-//    float radius = 0.05;
-//    float stop = 1 - radius;
-//    if (time >= stop) { center.y = stop; }
-//    else center.y = time;
-//    Particle p = Particle{center, radius};
-//    float distance = distanceToParticle(uv, p);
-//    float4 color = float4(1, 0.7, 0, 1);
-//    if (distance > 0) { color = float4(0.2, 0.5, 0.7, 1); }
-//    output.write(float4(color), gid);
-//}
