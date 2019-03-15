@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ParticleSystems/ParticleSystems.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BubbleParticle/BubbleParticle.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MetalParticle/MetalParticle.xcodeproj">
    </FileRef>
    <FileRef
