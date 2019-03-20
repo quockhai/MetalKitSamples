@@ -11,8 +11,6 @@ import MetalKit
 
 class MetalParticleView: MTKView {
     
-    
-    
     var commandQueue: MTLCommandQueue!
     var pipelineState: MTLRenderPipelineState!
     var model: MTKMesh!
@@ -37,6 +35,7 @@ class MetalParticleView: MTKView {
             self.commandQueue = self.device!.makeCommandQueue()
             
             self.initializeMetal()
+            
         } else {
             print("[MetalKit]: Your device is not supported Metal 🤪")
         }
@@ -52,7 +51,7 @@ class MetalParticleView: MTKView {
         self.particlesBuffer = device!.makeBuffer(length: particles.count * MemoryLayout<Particle>.stride, options: [])!
         var pointer = particlesBuffer.contents().bindMemory(to: Particle.self, capacity: particles.count)
         for _ in self.particles {
-            pointer.pointee.initialMatrix = self.translate(by: [Float(drand48()) / 10, Float(drand48()) * 10, 0])
+            pointer.pointee.initialMatrix = self.translate(by: [Float(drand48()) * 1.0, Float(drand48()) * 10, 0])//self.translate(by: [Float(drand48()) / 10, Float(drand48()) * 10, 0])
             pointer.pointee.color = float4(0.2, 0.6, 0.9, 1)
             pointer = pointer.advanced(by: 1)
         }
@@ -69,6 +68,7 @@ class MetalParticleView: MTKView {
     
     func initializeMetal() {
         self.initializeBuffers()
+        
         let library: MTLLibrary
         do {
             library = device!.makeDefaultLibrary()!
@@ -76,7 +76,7 @@ class MetalParticleView: MTKView {
             descriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
             descriptor.vertexFunction = library.makeFunction(name: "vertex_main")
             descriptor.fragmentFunction = library.makeFunction(name: "fragment_main")
-            descriptor.vertexDescriptor = MTKMetalVertexDescriptorFromModelIO(model.vertexDescriptor)
+            descriptor.vertexDescriptor = MTKMetalVertexDescriptorFromModelIO(self.model.vertexDescriptor)
             self.pipelineState = try device!.makeRenderPipelineState(descriptor: descriptor)
         } catch let error as NSError {
             print("[MetalKit] error: \(error.localizedDescription)")

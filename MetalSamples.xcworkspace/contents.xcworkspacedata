@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MetalRenderCamera/MetalRenderCamera.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AVCamPhotoFilter/AVCamPhotoFilter.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ComputeShader/ComputeShader.xcodeproj">
    </FileRef>
    <FileRef
