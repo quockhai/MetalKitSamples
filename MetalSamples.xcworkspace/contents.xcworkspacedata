@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PerformanceShaders/PerformanceShaders.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BlurredVideo/BlurredVideo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MetalRenderCamera/MetalRenderCamera.xcodeproj">
    </FileRef>
    <FileRef
