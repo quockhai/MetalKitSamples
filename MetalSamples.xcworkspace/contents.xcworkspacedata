@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MetalViewAnimation/MetalViewAnimation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AVCamFilter/AVCamFilter.xcodeproj">
    </FileRef>
    <FileRef
