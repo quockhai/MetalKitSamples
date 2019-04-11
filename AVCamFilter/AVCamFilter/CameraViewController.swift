@@ -60,6 +60,8 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate, AVC
 	private var setupResult: SessionSetupResult = .success
 	
 	private let session = AVCaptureSession()
+    
+    
 	
 	private var isSessionRunning = false
 	
@@ -77,7 +79,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate, AVC
 	private var outputSynchronizer: AVCaptureDataOutputSynchronizer?
 	
 	private let photoOutput = AVCapturePhotoOutput()
-	
+
 	private let filterRenderers: [FilterRenderer] = [RosyMetalRenderer(), RosyCIRenderer()]
 	
 	private let photoRenderers: [FilterRenderer] = [RosyMetalRenderer(), RosyCIRenderer()]
@@ -986,6 +988,8 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate, AVC
 			}
 			
 			self.photoOutput.capturePhoto(with: photoSettings, delegate: self)
+            
+            
 		}
 	}
 	

@@ -10,7 +10,7 @@ import MetalKit
 import MetalPerformanceShaders
 import AVKit
 
-class BlurredVideoMPSView: MTKView {
+class MetalView: MTKView {
     var player: AVPlayer!
     var blurRadius: Double = 6.0 {
         didSet {
@@ -28,7 +28,7 @@ class BlurredVideoMPSView: MTKView {
     }()
 
     private lazy var content: CIContext = {
-        return CIContext(mtlDevice: self.device!, options: [kCIContextWorkingColorSpace : NSNull()])
+        return CIContext(mtlDevice: self.device!, options: [CIContextOption.workingColorSpace : NSNull()])
     }()
 
     private var gaussianBlur: MPSImageGaussianBlur?
@@ -87,7 +87,7 @@ class BlurredVideoMPSView: MTKView {
     private func setupDisplayLink() {
         displayLink = CADisplayLink(target: self, selector: #selector(displayLinkUpdated(link:)))
         displayLink.preferredFramesPerSecond = 20
-        displayLink.add(to: .main, forMode: .commonModes)
+        displayLink.add(to: .main, forMode: RunLoop.Mode.common)
     }
 
     @objc private func displayLinkUpdated(link: CADisplayLink) {

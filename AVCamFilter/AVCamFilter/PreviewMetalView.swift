@@ -8,6 +8,7 @@ The Metal preview view.
 import CoreMedia
 import Metal
 import MetalKit
+import MetalPerformanceShaders
 
 class PreviewMetalView: MTKView {
 	
@@ -234,6 +235,7 @@ class PreviewMetalView: MTKView {
 		createTextureCache()
 		
 		colorPixelFormat = .bgra8Unorm
+        setup()
 	}
 	
 	func configureMetal() {
@@ -268,6 +270,12 @@ class PreviewMetalView: MTKView {
 			assertionFailure("Unable to allocate texture cache")
 		}
 	}
+    
+    private func setup() {
+        framebufferOnly = false
+        isPaused = false
+        enableSetNeedsDisplay = false
+    }
 	
 	/// - Tag: DrawMetalTexture
 	override func draw(_ rect: CGRect) {
@@ -349,6 +357,50 @@ class PreviewMetalView: MTKView {
 		
 		// Draw to the screen.
 		commandBuffer.present(drawable)
+        
+        
+        if let gaussianBlur = self.createGaussianBlur() {
+            // apply the gaussian blur with MPS
+            let currentTexture = drawable.texture
+            let inplaceTexture = UnsafeMutablePointer<MTLTexture>.allocate(capacity: 1)
+            inplaceTexture.initialize(to: currentTexture)
+            gaussianBlur.encode(commandBuffer: commandBuffer, inPlaceTexture: inplaceTexture)
+        }
 		commandBuffer.commit()
 	}
+    
+    private func createGaussianBlur() -> MPSImageGaussianBlur? {
+        if let device = device, MPSSupportsMTLDevice(device) {
+            return MPSImageGaussianBlur(device: device, sigma: 10.0)
+        }
+        
+        return nil
+    }
+    
+//    func gaussianDraw() {
+//        guard let image = image,
+//            let currentDrawable = currentDrawable,
+//            let commandBuffer = commandQueue?.makeCommandBuffer()
+//            else {
+//                return
+//        }
+//        let currentTexture = currentDrawable.texture
+//        let drawingBounds = CGRect(origin: .zero, size: drawableSize)
+//
+//        let scaleX = drawableSize.width / image.extent.width
+//        let scaleY = drawableSize.height / image.extent.height
+//        let scaledImage = image.transformed(by: CGAffineTransform(scaleX: scaleX, y: scaleY))
+//
+//        content.render(scaledImage, to: currentTexture, commandBuffer: commandBuffer, bounds: drawingBounds, colorSpace: colorSpace)
+//        commandBuffer.present(currentDrawable)
+//
+//        if let gaussianBlur = gaussianBlur {
+//            // apply the gaussian blur with MPS
+//            let inplaceTexture = UnsafeMutablePointer<MTLTexture>.allocate(capacity: 1)
+//            inplaceTexture.initialize(to: currentTexture)
+//            gaussianBlur.encode(commandBuffer: commandBuffer, inPlaceTexture: inplaceTexture)
+//        }
+//
+//        commandBuffer.commit()
+//    }
 }

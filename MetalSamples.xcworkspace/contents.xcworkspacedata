@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MetalVideoFilter/MetalVideoFilter.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MetalTextures/MetalTextures.xcodeproj">
    </FileRef>
    <FileRef

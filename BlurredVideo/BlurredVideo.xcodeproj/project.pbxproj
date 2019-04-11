@@ -29,7 +29,7 @@
 		0335F2A81FBA0AB700421822 /* BlurredVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurredVideoView.swift; sourceTree = "<group>"; };
 		037F6C8D1FBCCC3A0008B357 /* BlurredVideoMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredVideoMetalView.swift; sourceTree = "<group>"; };
 		037F6C901FBCD3710008B357 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		6F2DB342F07088DB71E877C1 /* BlurredVideoMPSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurredVideoMPSView.swift; sourceTree = "<group>"; };
+		6F2DB342F07088DB71E877C1 /* BlurredVideoMPSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlurredVideoMPSView.swift; path = ../../MetalVideoFilter/MetalVideoFilter/BlurredVideoMPSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
