@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		882DD64B225F137B00ABFF46 /* backgroundImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 882DD64A225F137B00ABFF46 /* backgroundImage.jpg */; };
+		882DD64D225F13AD00ABFF46 /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DD64C225F13AD00ABFF46 /* Texturable.swift */; };
+		882DD651225F1B3A00ABFF46 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 882DD650225F1B3A00ABFF46 /* apple.png */; };
+		8854BF6C225EFE370027F26E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854BF6B225EFE370027F26E /* AppDelegate.swift */; };
+		8854BF6E225EFE370027F26E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854BF6D225EFE370027F26E /* ViewController.swift */; };
+		8854BF71225EFE370027F26E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8854BF6F225EFE370027F26E /* Main.storyboard */; };
+		8854BF73225EFE380027F26E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8854BF72225EFE380027F26E /* Assets.xcassets */; };
+		8854BF76225EFE380027F26E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8854BF74225EFE380027F26E /* LaunchScreen.storyboard */; };
+		8854BF80225EFE5C0027F26E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854BF7D225EFE5C0027F26E /* Types.swift */; };
+		8854BF81225EFE5C0027F26E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8854BF7E225EFE5C0027F26E /* Shaders.metal */; };
+		8854BF82225EFE5C0027F26E /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854BF7F225EFE5C0027F26E /* MetalView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		882DD64A225F137B00ABFF46 /* backgroundImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundImage.jpg; sourceTree = "<group>"; };
+		882DD64C225F13AD00ABFF46 /* Texturable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texturable.swift; sourceTree = "<group>"; };
+		882DD650225F1B3A00ABFF46 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		8854BF68225EFE370027F26E /* MetalTextures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalTextures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8854BF6B225EFE370027F26E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8854BF6D225EFE370027F26E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8854BF70225EFE370027F26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8854BF72225EFE380027F26E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8854BF75225EFE380027F26E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8854BF77225EFE380027F26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8854BF7D225EFE5C0027F26E /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		8854BF7E225EFE5C0027F26E /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		8854BF7F225EFE5C0027F26E /* MetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8854BF65225EFE370027F26E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8854BF5F225EFE370027F26E = {
+			isa = PBXGroup;
+			children = (
+				8854BF6A225EFE370027F26E /* MetalTextures */,
+				8854BF69225EFE370027F26E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8854BF69225EFE370027F26E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8854BF68225EFE370027F26E /* MetalTextures.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8854BF6A225EFE370027F26E /* MetalTextures */ = {
+			isa = PBXGroup;
+			children = (
+				8854BF6B225EFE370027F26E /* AppDelegate.swift */,
+				8854BF6D225EFE370027F26E /* ViewController.swift */,
+				8854BF6F225EFE370027F26E /* Main.storyboard */,
+				8854BF72225EFE380027F26E /* Assets.xcassets */,
+				8854BF74225EFE380027F26E /* LaunchScreen.storyboard */,
+				8854BF77225EFE380027F26E /* Info.plist */,
+				8854BF7F225EFE5C0027F26E /* MetalView.swift */,
+				8854BF7E225EFE5C0027F26E /* Shaders.metal */,
+				8854BF7D225EFE5C0027F26E /* Types.swift */,
+				882DD64A225F137B00ABFF46 /* backgroundImage.jpg */,
+				882DD650225F1B3A00ABFF46 /* apple.png */,
+				882DD64C225F13AD00ABFF46 /* Texturable.swift */,
+			);
+			path = MetalTextures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8854BF67225EFE370027F26E /* MetalTextures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8854BF7A225EFE380027F26E /* Build configuration list for PBXNativeTarget "MetalTextures" */;
+			buildPhases = (
+				8854BF64225EFE370027F26E /* Sources */,
+				8854BF65225EFE370027F26E /* Frameworks */,
+				8854BF66225EFE370027F26E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalTextures;
+			productName = MetalTextures;
+			productReference = 8854BF68225EFE370027F26E /* MetalTextures.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8854BF60225EFE370027F26E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Polymath;
+				TargetAttributes = {
+					8854BF67225EFE370027F26E = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 8854BF63225EFE370027F26E /* Build configuration list for PBXProject "MetalTextures" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8854BF5F225EFE370027F26E;
+			productRefGroup = 8854BF69225EFE370027F26E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8854BF67225EFE370027F26E /* MetalTextures */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8854BF66225EFE370027F26E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8854BF76225EFE380027F26E /* LaunchScreen.storyboard in Resources */,
+				882DD64B225F137B00ABFF46 /* backgroundImage.jpg in Resources */,
+				8854BF73225EFE380027F26E /* Assets.xcassets in Resources */,
+				882DD651225F1B3A00ABFF46 /* apple.png in Resources */,
+				8854BF71225EFE370027F26E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8854BF64225EFE370027F26E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8854BF81225EFE5C0027F26E /* Shaders.metal in Sources */,
+				882DD64D225F13AD00ABFF46 /* Texturable.swift in Sources */,
+				8854BF80225EFE5C0027F26E /* Types.swift in Sources */,
+				8854BF82225EFE5C0027F26E /* MetalView.swift in Sources */,
+				8854BF6E225EFE370027F26E /* ViewController.swift in Sources */,
+				8854BF6C225EFE370027F26E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8854BF6F225EFE370027F26E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8854BF70225EFE370027F26E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8854BF74225EFE380027F26E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8854BF75225EFE380027F26E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8854BF78225EFE380027F26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8854BF79225EFE380027F26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8854BF7B225EFE380027F26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8X2UF2GG54;
+				INFOPLIST_FILE = MetalTextures/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polymath.MetalTextures;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8854BF7C225EFE380027F26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8X2UF2GG54;
+				INFOPLIST_FILE = MetalTextures/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polymath.MetalTextures;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8854BF63225EFE370027F26E /* Build configuration list for PBXProject "MetalTextures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8854BF78225EFE380027F26E /* Debug */,
+				8854BF79225EFE380027F26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8854BF7A225EFE380027F26E /* Build configuration list for PBXNativeTarget "MetalTextures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8854BF7B225EFE380027F26E /* Debug */,
+				8854BF7C225EFE380027F26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8854BF60225EFE370027F26E /* Project object */;
+}
