@@ -20,6 +20,7 @@ public class BBMetalDevice {
     public let colorSpace: CGColorSpace
     
     private init() {
+        
         device = MTLCreateSystemDefaultDevice()!
         commandQueue = device.makeCommandQueue()!
         colorSpace = CGColorSpaceCreateDeviceRGB()
