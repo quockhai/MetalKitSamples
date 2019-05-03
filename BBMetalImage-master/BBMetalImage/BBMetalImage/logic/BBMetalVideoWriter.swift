@@ -29,7 +29,7 @@ public class BBMetalVideoWriter {
     public init(url: URL,
                 frameSize: BBMetalIntSize,
                 fileType: AVFileType = .mp4,
-                outputSettings: [String : Any] = [AVVideoCodecKey : AVVideoCodecH264]) {
+                outputSettings: [String : Any] = [AVVideoCodecKey : AVVideoCodecType.h264]) {
         
         self.url = url
         self.frameSize = frameSize
